@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 
 connecttodb();
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the User Authentication API');
+});
 
 app.post('/create', async (req, res) => {
   try {
